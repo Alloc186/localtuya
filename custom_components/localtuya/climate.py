@@ -18,11 +18,13 @@ from homeassistant.components.climate.const import (
     SUPPORT_TARGET_TEMPERATURE,
     SUPPORT_TARGET_TEMPERATURE_RANGE,
     CURRENT_HVAC_OFF,
+    CURRENT_HVAC_IDLE,
     CURRENT_HVAC_HEAT,
     PRESET_NONE,
     PRESET_ECO,
     PRESET_AWAY,
     PRESET_HOME,
+    PRESET_COMFORT,
 )
 from homeassistant.const import (
     ATTR_TEMPERATURE,
@@ -65,6 +67,10 @@ HVAC_MODE_SETS = {
         HVAC_MODE_HEAT: "Manual",
         HVAC_MODE_AUTO: "Auto",
     },
+    "Program/Auto": {
+        HVAC_MODE_HEAT: "Manual",
+        HVAC_MODE_AUTO: "Program",
+    },    
     "True/False": {
         HVAC_MODE_HEAT: True,
     },
@@ -87,7 +93,7 @@ PRESET_SETS = {
     "Manual/Holiday/Program": {
         PRESET_AWAY: "Holiday",
         PRESET_HOME: "Program",
-        PRESET_NONE: "Manual",
+        PRESET_COMFORT: "Manual",
     },
 }
 
