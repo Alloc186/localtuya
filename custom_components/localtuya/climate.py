@@ -23,6 +23,7 @@ from homeassistant.components.climate.const import (
     PRESET_ECO,
     PRESET_AWAY,
     PRESET_HOME,
+    PRESET_COMFORT,
 )
 from homeassistant.const import (
     ATTR_TEMPERATURE,
@@ -88,10 +89,15 @@ HVAC_ACTION_SETS = {
     },
 }
 PRESET_SETS = {
-    "Manual/Holiday/Program": {
+    "None/Holiday/Program": {
         PRESET_AWAY: "Holiday",
         PRESET_HOME: "Program",
         PRESET_NONE: "Manual",
+    },
+    "Manual/Holiday/Program": {
+        PRESET_AWAY: "Holiday",
+        PRESET_HOME: "Program",
+        PRESET_COMFORT: "Manual",
     },
 }
 
